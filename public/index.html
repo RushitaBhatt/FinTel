@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinTel India Forecast Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,ital,wght@6..96,1,700&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css?v=3">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="ambient ambient-one"></div>
+        <div class="ambient ambient-two"></div>
+        <div class="ambient ambient-three"></div>
+
+        <section class="hero hero-home hero-home-right-rail">
+            <div class="hero-main">
+                <div class="hero-copy">
+                    <div class="hero-brand-row">
+                        <div class="logo-mark" aria-hidden="true">
+                            <img src="/fintel-mark.svg" alt="FinTel logo">
+                        </div>
+                        <h1>FinTel</h1>
+                    </div>
+                    <div class="brand-lockup">
+                        <div class="brand-copy">
+                            <p class="eyebrow">FinTel Forecast Studio</p>
+                            <span>Indian equities, short-term signals, and market context</span>
+                        </div>
+                    </div>
+                    <p class="hero-subheading">Search almost any listed Indian stock, see the trend, and understand the story behind the prediction.</p>
+                    <p class="hero-text">
+                        FinTel is built to make Indian stock research feel clear and deliberate. Search by company name or symbol, jump into a focused forecast view, and get price movement with enough market context to understand what the model is reacting to.
+                    </p>
+                    <div class="hero-chips hero-chips-brand">
+                        <span>Indian market search</span>
+                        <span>52-week range</span>
+                        <span>Forecast + headlines</span>
+                    </div>
+                </div>
+
+                <section class="search-card glass search-card-home">
+                    <form id="ticker-form" class="search-form">
+                        <label for="ticker-input">Search Indian stock</label>
+                        <div class="search-row">
+                            <input id="ticker-input" name="ticker" type="text" placeholder="Try Reliance, TCS, Infosys, HDFC Bank" maxlength="40" autocomplete="off">
+                            <button type="submit">Open analysis</button>
+                        </div>
+                    </form>
+
+                    <div id="suggestions" class="suggestions" hidden></div>
+                    <p id="status" class="status">Type a company name or symbol to open the detailed analysis page.</p>
+                </section>
+            </div>
+
+            <aside class="trending-sidebar glass">
+                <div class="sidebar-head">
+                    <div>
+                        <p class="section-kicker">Live Board</p>
+                        <h2>Trending Stocks</h2>
+                    </div>
+                    <div id="trending-status" class="sidebar-status">Refreshing on reload</div>
+                </div>
+                <div id="trending-list" class="trending-list">
+                    <article class="trending-item trending-loading">
+                        <div class="trending-meta">
+                            <strong>Loading stocks...</strong>
+                            <span>Pulling current and forecast values</span>
+                        </div>
+                    </article>
+                </div>
+            </aside>
+        </section>
+    </div>
+
+    <script src="/home.js?v=3"></script>
+</body>
+</html>
